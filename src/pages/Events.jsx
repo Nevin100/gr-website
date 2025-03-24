@@ -112,14 +112,14 @@ export default function Events() {
   };
 
   return (
-    <div className="h-full relative bg-[#121212] md:py-5">
+    <div className="h-full relative bg-[#121212] md:py-5 overflow-x-hidden">
       {/* Events Page Banner with Animation */}
       <motion.section
         initial={{ scale: 0.7, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.8, ease: "easeInOut" }}
-        viewport={{ once: false, amount: 0.4 }}
-        className="max-h-screen md:mb-8 flex flex-col items-center justify-center text-[#F2F2F2] px-4"
+        viewport={{ once: true, amount: 0.4 }}
+        className="max-h-screen w-full md:mb-8 flex flex-col items-center justify-center text-[#F2F2F2] px-4"
       >
         <img
           src="./logo/transparent_geek_room_logo.svg"
@@ -141,12 +141,13 @@ export default function Events() {
         exit={{ opacity: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
+        className="w-full"
       >
         <h1 className="text-[2.3rem] md:ml-[6rem] ml-[2rem] md:text-[4rem] font-satoshi-bold text-center tracking-loose mb-3 md:mb-2 md:mt-[7rem] text-[#F2F2F2]">
           SPOTLIGHT 🚀
         </h1>
 
-        <section className="relative flex flex-col md:flex-row justify-center items-center min-h-screen bg-[#121212] md:px-10 md:gap-x-16">
+        <section className="w-full relative flex flex-col md:flex-row justify-center items-center min-h-screen bg-[#121212] md:px-10 md:gap-x-16">
           {/* Left Box (Orange) - Adjusted width */}
           <div className="relative w-[60%] h-[300px] md:w-[25%] md:h-[400px] flex justify-end md:ml-[-19rem]">
             {spotlightEvents.slice(0, currentIndex + 1).map((event, index) => (
@@ -252,9 +253,9 @@ export default function Events() {
         animate={{ x: 0, opacity: 1 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="text-[#F2F2F2] flex flex-col items-center p-5 md:p-10 md:mt-[6rem] mt-[5rem]"
+        className="text-[#F2F2F2] w-full flex flex-col items-center p-5 md:p-10 md:mt-[6rem] mt-[5rem]"
       >
         <h1 className="text-[2.3rem] md:text-[6rem] font-satoshi-bold mb-5 md:mb-10 tracking-tighter text-center">
           UPCOMING EVENTS 🚀
@@ -282,9 +283,9 @@ export default function Events() {
         animate={{ x: 0, opacity: 1 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="min-h-screen text-white flex flex-col items-center p-5 md:p-10 md:mt-[6rem] mt-[7rem]"
+        className="min-h-screen w-full text-white flex flex-col items-center p-5 md:p-10 md:mt-[6rem] mt-[7rem]"
       >
         <h1 className="text-[2.3rem] md:text-[6rem] font-satoshi-bold mb-5 md:mb-8 tracking-tighter text-center">
           PAST EVENTS 🌟
